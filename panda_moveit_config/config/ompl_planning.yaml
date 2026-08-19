@@ -144,6 +144,7 @@ planner_configs:
     type: geometric::TrajOpt
 
 panda_arm:
+  enforce_joint_model_state_space: true
   planner_configs:
     - APSConfigDefault
     - SBLkConfigDefault
