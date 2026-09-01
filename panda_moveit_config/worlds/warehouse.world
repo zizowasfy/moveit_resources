@@ -69,13 +69,13 @@
     <!-- Table in front of the robot -->
     <model name="table">
       <static>true</static>
-      <pose>0.6 0 0.0 0 0 0</pose>
+      <pose>0.6 0 0.125 0 0 0</pose>
       <link name="link">
         <collision name="surface">
           <pose>0 0 0.0 0 0 0</pose>
           <geometry>
             <box>
-              <size>0.75 1.0 0.5</size>
+              <size>0.75 1.0 0.25</size>
             </box>
           </geometry>
           <surface>
@@ -91,7 +91,7 @@
           <pose>0 0 0.0 0 0 0</pose>
           <geometry>
             <box>
-              <size>0.75 1.0 0.5</size>
+              <size>0.75 1.0 0.25</size>
             </box>
           </geometry>
           <material>
