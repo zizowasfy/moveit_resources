@@ -36,7 +36,7 @@ def generate_launch_description():
     # Command-line arguments
     rviz_config_arg = DeclareLaunchArgument(
         "rviz_config",
-        default_value="moveit.rviz",
+        default_value="sampling.rviz",
         description="RViz configuration file",
     )
 
@@ -76,7 +76,8 @@ def generate_launch_description():
         package="moveit_ros_move_group",
         executable="move_group",
         output="screen",
-        parameters=[moveit_config.to_dict()],
+        parameters=[moveit_config.to_dict(),
+                    {"constraint_samplers": "tp_gmm/GMMConstraintSamplerAllocator"}],
         arguments=["--ros-args", "--log-level", "info"],
     )
 
