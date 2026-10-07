@@ -149,6 +149,8 @@ panda_arm:
   # Check corridor/collision edges more densely for all sampling modes.
   longest_valid_segment_fraction: 0.0005
   enforce_joint_model_state_space: true
+  # Strict custom sampling: no hidden OMPL uniform draw after failed proposals.
+  allow_constraint_sampler_fallback: false
   planner_configs:
     - APSConfigDefault
     - SBLkConfigDefault
